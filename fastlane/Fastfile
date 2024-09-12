@@ -1,0 +1,10 @@
+default_platform(:android)
+
+platform(:android) do
+ lane :build_apk do
+  gradle(
+   task: "bundle",
+   build_type: "Release"
+  )
+ end
+end

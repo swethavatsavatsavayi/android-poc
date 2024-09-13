@@ -10,7 +10,7 @@ pipeline {
         //        "/home/svatsavayi/.rvm/rubies/ruby-3.3.0/bin:" +
         //        "/usr/local/bin:" +
         //        "$PATH"
-        //PATH = "$FASTLANE_HOME:$PATH"
+        PATH = "/home/svatsavayi/bin/:$PATH"
     }
     stages {
         stage('Checkout Code') {

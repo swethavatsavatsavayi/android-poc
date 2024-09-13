@@ -3,7 +3,7 @@ pipeline {
     environment {
         ANDROID_HOME = "/home/svatsavayi/android-sdk/"  // Replace with your actual Android SDK path
         JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-17.0.12.0.7-2.el8.x86_64"  // Replace with your actual Java SDK path
-        HOME = "/usr/local/rvm/gems/ruby-3.3.0/gems/fastlane-2.222.0/bin/"
+        HOME = "/home/svatsavayi/.rvm/gems/ruby-3.3.0/gems/fastlane-2.222.0/"
         PATH = "$HOME/.fastlane/bin:" +
                "$HOME/.rvm/gems/ruby-2.5.3/bin:" +
                "$HOME/.rvm/gems/ruby-2.5.3@global/bin:" +

@@ -16,6 +16,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 // Checkout code from your version control system
+               sh 'echo $PATH'
                checkout scm
                sh 'chmod +x gradlew'
             }

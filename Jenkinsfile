@@ -10,13 +10,12 @@ pipeline {
         //        "/home/svatsavayi/.rvm/rubies/ruby-3.3.0/bin:" +
         //        "/usr/local/bin:" +
         //        "$PATH"
-        PATH = "/home/svatsavayi/bin/:$PATH"
+        PATH = "/home/svatsavayi/.gem/ruby/gems/fastlane-2.206.2/bin/:$PATH"
     }
     stages {
         stage('Checkout Code') {
             steps {
                 // Checkout code from your version control system
-               sh 'gem install fastlane'
                checkout scm
                sh 'chmod +x gradlew'
             }

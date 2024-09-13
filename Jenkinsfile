@@ -4,7 +4,7 @@ pipeline {
         ANDROID_HOME = "/home/svatsavayi/android-sdk/"  // Replace with your actual Android SDK path
         JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-17.0.12.0.7-2.el8.x86_64"  // Replace with your actual Java SDK path
         FASTLANE_HOME = "/usr/local/rvm/gems/ruby-3.3.0/gems/fastlane-2.222.0/bin/fastlane"
-        PATH = "$FASTLANE_HOME:PATH"
+        PATH = "$FASTLANE_HOME:$PATH"
     }
     stages {
         stage('Checkout Code') {

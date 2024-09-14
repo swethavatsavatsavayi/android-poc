@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         ANDROID_HOME = "/home/svatsavayi/android-sdk/"  // Replace with your actual Android SDK path
-        JAVA_HOME = "/usr/lib/jvm/java-11-openjdk-11.0.24.0.8-3.el8.x86_64"  // Replace with your actual Java SDK path
+        JAVA_HOME = "/usr/lib/jvm/java-17-openjdk-17.0.12.0.7-2.el8.x86_64"  // Replace with your actual Java SDK path
         //HOME = "/home/svatsavayi/.rvm/gems/ruby-3.3.0/gems/fastlane-2.222.0/"
         // PATH = "/home/svatsavayi/.rvm/gems/ruby-3.3.0/gems/fastlane-2.222.0/bin:" +
         //        "/home/svatsavayi/.rvm/gems/ruby-3.3.0/bin:" +

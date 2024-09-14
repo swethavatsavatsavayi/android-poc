@@ -4,7 +4,7 @@ platform(:android) do
  lane :build_apk do
   gradle(
    task: "bundle",
-   build_type: "Release"
+   build_configuration: "Release"
   )
  end
 end

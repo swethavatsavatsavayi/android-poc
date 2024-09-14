@@ -29,7 +29,7 @@ pipeline {
         stage('Run Fastlane') {
             steps {
                 // Build the APK using Fastlane
-                sh 'sudo fastlane android build_apk'
+                sh 'fastlane android build_apk'
             }
         }
         stage('Archive APK') {

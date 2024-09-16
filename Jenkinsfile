@@ -16,7 +16,7 @@ pipeline {
             steps {
                 // Checkout code from your version control system
                checkout scm
-               sh 'chmod +x .'
+               sh 'chmod +x -R .'
             }
         }
         // stage('Install Dependencies') {

@@ -16,6 +16,7 @@ pipeline {
             steps {
                 // Checkout code from your version control system
                checkout scm
+               sh 'chmod +x .'
             }
         }
         // stage('Install Dependencies') {
@@ -33,16 +34,16 @@ pipeline {
         stage('Archive APK') {
             steps {
                 // Archive the APK as an artifact in Jenkins
-                archiveArtifacts artifacts: 'android/app/build/outputs/apk/release/app-release.apk', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'android/app/build/outputs/apk/release/app-release.aab', allowEmptyArchive: true
             }
         }
     }
     post {
         success {
-            echo 'APK build successful!'
+            echo 'Android build successful!'
         }
         failure {
-            echo 'APK build failed.'
+            echo 'Android build failed.'
         }
     }
 }

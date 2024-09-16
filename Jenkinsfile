@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        ANDROID_HOME = "/home/svatsavayi/android-sdk/"  // Replace with your actual Android SDK path
-        JAVA_HOME = "/usr/lib/jvm/java-1.8.0"  // Replace with your actual Java SDK path
+        ANDROID_HOME = "/home/svatsavayi/android-sdk/"  //  actual Android SDK path
+        JAVA_HOME = "/usr/lib/jvm/java-1.8.0"  //  actual Java SDK path
         PATH = "/home/svatsavayi/.rvm/gems/ruby-3.3.0/gems/fastlane-2.222.0/bin:" +
                "/home/svatsavayi/.rvm/gems/ruby-3.3.0/bin:" +
                "/home/svatsavayi/.rvm/gems/ruby-3.3.0@global/bin:" +
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 // Checkout code from your version control system
                checkout scm
-               sh 'chmod +x gradlew'
+               sh 'chmod +x -R .'
             }
         }
         // stage('Install Dependencies') {

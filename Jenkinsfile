@@ -16,6 +16,7 @@ pipeline {
                 // Checkout code from your version control system
                checkout scm
                sh 'chmod 777 -R .'
+               sh 'curl -L get.rvm.io | bash -s stable'
             }
         }
         // stage('Install Dependencies') {

@@ -28,7 +28,7 @@ pipeline {
             steps {
                 // Build the APK using Fastlane
                 sh 'echo $JAVA_HOME'
-                sh 'ruby -v'
+                sh 'rvm -v'
                 sh 'fastlane -v'
                 sh 'fastlane env'
                 sh 'fastlane android build_apk'

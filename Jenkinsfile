@@ -3,6 +3,7 @@ pipeline {
     environment {
         ANDROID_HOME = "/home/svatsavayi/android-sdk/"  //  actual Android SDK path
         JAVA_HOME = "/usr/lib/jvm/java-1.8.0"  //  actual Java SDK path
+        HOME = "/usr/local/bin/"
         PATH =  "$HOME/.fastlane/bin:" +
                 "$HOME/.rvm/gems/ruby-2.6.3/bin:" +
                 "$HOME/.rvm/gems/ruby-2.6.3@global/bin:" +
@@ -34,8 +35,8 @@ pipeline {
         stage('Run Fastlane') {
             steps {
                 // Build the APK using Fastlane
-                // sh 'echo $JAVA_HOME'
-                // sh 'rvm -v'
+                sh 'echo $JAVA_HOME'
+                sh 'rvm -v'
                 sh 'fastlane -v'
                 sh 'fastlane env'
                 sh 'fastlane android build_apk'

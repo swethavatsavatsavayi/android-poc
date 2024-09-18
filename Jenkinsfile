@@ -16,7 +16,7 @@ pipeline {
             steps {
                 // Checkout code from your version control system
                checkout scm
-               sh 'chmod 777 -R .'
+               sh 'chmod +x gradlew'
             }
         }
         // stage('Install Dependencies') {
@@ -36,7 +36,7 @@ pipeline {
         stage('Archive APK') {
             steps {
                 // Archive the APK as an artifact in Jenkins
-                archiveArtifacts artifacts: 'android/app/build/outputs/apk/release/app-release.aab', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'app/build/outputs/apk/release/app-release.aab', allowEmptyArchive: true
             }
         }
     }

@@ -6,5 +6,9 @@ platform(:android) do
    task: "bundle",
    build_type: "Release"
   )
+  gradle(
+   task: "assemble",
+   build_type: "Release"
+  )
  end
 end

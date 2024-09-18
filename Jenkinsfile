@@ -4,12 +4,6 @@ pipeline {
         ANDROID_HOME = "/home/svatsavayi/android-sdk/"  //  actual Android SDK path
         JAVA_HOME = "/usr/lib/jvm/java-1.8.0"  //  actual Java SDK path
         PATH = "/usr/local/rvm/gems/ruby-3.3.0/bin:/usr/local/rvm/gems/ruby-3.3.0@global/bin:/usr/local/rvm/rubies/ruby-3.3.0/bin:/usr/local/rvm/bin:$PATH"
-        //PATH = "/usr/local/rvm/gems/ruby-3.3.0/bin:" +
-        //        "/usr/local/rvm/gems/ruby-3.3.0@global/bin:" +
-        //        "/usr/local/rvm/gems//ruby-3.3.0/bin:" +
-        //        "/usr/local/bin:" +
-        //        "$PATH"
-        //PATH = "/home/svatsavayi/.gem/ruby/gems/fastlane-2.206.2/bin/:$PATH"
     }
     stages {
         stage('Checkout Code') {
@@ -36,7 +30,7 @@ pipeline {
         stage('Archive APK') {
             steps {
                 // Archive the APK as an artifact in Jenkins
-                archiveArtifacts artifacts: 'app/build/outputs/apk/release/app-release.aab', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'app/build/outputs/bundle/release/app-release.aab', allowEmptyArchive: true
             }
         }
     }

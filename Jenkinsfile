@@ -10,6 +10,7 @@ pipeline {
             steps {
                 // Checkout code from your version control system
                checkout scm
+               sh 'chmod +x gradlew'
             }
         }
         // stage('Install Dependencies') {
